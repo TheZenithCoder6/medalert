@@ -28,7 +28,6 @@ export default function MedAlertApp() {
   const [showQR, setShowQR] = useState(false);
   const [isEmergencyView, setIsEmergencyView] = useState(false);
   
-  // Form State
   const [formData, setFormData] = useState({
     name: "",
     age: "",
@@ -47,7 +46,6 @@ export default function MedAlertApp() {
   const [selectedConditions, setSelectedConditions] = useState<string[]>([]);
   const qrRef = useRef<HTMLDivElement>(null);
 
-  // Check for URL data (Mocking the emergency view logic)
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     if (params.get("d")) {
@@ -76,7 +74,7 @@ export default function MedAlertApp() {
 
   const buildText = () => {
     const lines = [
-      "=== SOS EMERGENCY ===",
+      "=== EMERGENCY ===",
       `Name: ${formData.name}`,
       formData.age ? `Age: ${formData.age}` : null,
       formData.blood ? `Blood: ${formData.blood}` : null,
@@ -151,14 +149,12 @@ export default function MedAlertApp() {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-slate-200 font-sans p-6">
       <div className="max-w-[500px] mx-auto">
-        {/* Header */}
         <header className="text-center mb-8">
           <div className="text-5xl mb-2">🛡️</div>
           <h1 className="text-2xl font-black text-[#ff4757]">Med-Alert</h1>
           <p className="text-slate-500 text-sm">Emergency QR — scan</p>
         </header>
 
-        {/* Steps */}
         {!showQR && (
           <div className="flex justify-center gap-2 mb-6">
             {["Personal", "Medical", "Contacts"].map((label, i) => (
@@ -183,7 +179,7 @@ export default function MedAlertApp() {
                   <User size={16} /> Personal Info
                 </h2>
                 <div className="space-y-1">
-                  <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Full Name *</label>
+                  <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest"> Your Full Name *</label>
                   <input id="name" value={formData.name} onChange={handleChange} className="w-full bg-[#0d0d0d] border border-[#2a2a2a] rounded-lg p-3 outline-none focus:border-[#ff4757]" placeholder="Arjun Sharma" />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
@@ -263,7 +259,7 @@ export default function MedAlertApp() {
                     <ChevronLeft size={18} /> Back
                   </button>
                   <button onClick={() => setShowQR(true)} className="flex-[2] bg-gradient-to-r from-[#ff4757] to-[#ff6b81] text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-red-900/20">
-                    🛡️ Generate QR
+                   Generate QR
                   </button>
                 </div>
               </section>
@@ -293,7 +289,6 @@ export default function MedAlertApp() {
   );
 }
 
-// Helper Components
 function InfoRow({ color, label, value, icon }: { color: string, label: string, value: string, icon: string }) {
   if (!value) return null;
   return (
