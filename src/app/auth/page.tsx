@@ -182,7 +182,7 @@ export default function AuthPage() {
                 </div>
               )}
 
-              {/* shimmer effect on hover via the absolutely positioned div */
+              {/* shimmer effect on hover via the absolutely positioned div */}
               <button
                 disabled={loading}
                 className="group/btn relative w-full bg-red-600 hover:bg-red-500 text-white font-black py-4 rounded-2xl mt-4 overflow-hidden transition-all active:scale-[0.98] disabled:opacity-70 shadow-[0_10px_20px_rgba(220,38,38,0.2)]"
