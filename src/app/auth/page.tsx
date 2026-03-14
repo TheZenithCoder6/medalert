@@ -180,7 +180,6 @@ export default function AuthPage() {
           </div>
           <div className="flex items-center gap-1.5">
             <Sparkles size={14} />
-            <span className="text-[10px] font-bold uppercase tracking-widest">v2.0 Beta</span>
           </div>
         </div>
       </div>
