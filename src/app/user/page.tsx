@@ -270,7 +270,7 @@ export default function MedAlertApp() {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full bg-[#0d0d0d] border border-[#2a2a2a] rounded-lg p-3 outline-none focus:border-[#ff4757]"
-                    placeholder="Arjun Sharma"
+                    placeholder=""
                   />
                 </div>
 
@@ -285,7 +285,7 @@ export default function MedAlertApp() {
                       value={formData.age}
                       onChange={handleChange}
                       className="w-full bg-[#0d0d0d] border border-[#2a2a2a] rounded-lg p-3 outline-none"
-                      placeholder="28"
+                      placeholder=""
                     />
                   </div>
                   <div className="space-y-1">
@@ -332,7 +332,7 @@ export default function MedAlertApp() {
                     value={formData.allergies}
                     onChange={handleChange}
                     className="w-full bg-[#0d0d0d] border border-[#2a2a2a] rounded-lg p-3 outline-none"
-                    placeholder="Peanuts, Penicillin..."
+                    placeholder=""
                   />
                 </div>
 
@@ -345,7 +345,7 @@ export default function MedAlertApp() {
                     value={formData.meds}
                     onChange={handleChange}
                     className="w-full bg-[#0d0d0d] border border-[#2a2a2a] rounded-lg p-3 outline-none"
-                    placeholder="Insulin, Metformin..."
+                    placeholder=" "
                   />
                 </div>
 
