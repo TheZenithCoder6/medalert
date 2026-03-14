@@ -144,7 +144,7 @@ export default function AuthPage() {
                     type="email"
                     required
                     onChange={handleChange}
-                    placeholder="name@company.com"
+                    placeholder=""
                     className="w-full bg-white/[0.03] border border-white/5 rounded-2xl py-3.5 pl-12 pr-4 text-white outline-none focus:bg-white/[0.05] focus:border-red-500/50 transition-all placeholder:text-slate-700"
                   />
                 </div>
@@ -164,7 +164,7 @@ export default function AuthPage() {
                     type="password"
                     required
                     onChange={handleChange}
-                    placeholder="••••••••"
+                    placeholder=""
                     className="w-full bg-white/[0.03] border border-white/5 rounded-2xl py-3.5 pl-12 pr-4 text-white outline-none focus:bg-white/[0.05] focus:border-red-500/50 transition-all placeholder:text-slate-700"
                   />
                 </div>
@@ -172,7 +172,7 @@ export default function AuthPage() {
 
               {isLogin && (
                 <div className="flex justify-end">
-                  {/* TODO: actually build forgot password flow */}
+                  {/*  actually build forgot password flow */}
                   <button
                     type="button"
                     className="text-[11px] font-bold text-red-500/80 hover:text-red-500 uppercase tracking-wider"
@@ -182,7 +182,7 @@ export default function AuthPage() {
                 </div>
               )}
 
-              {/* shimmer effect on hover via the absolutely positioned div */}
+              {/* shimmer effect on hover via the absolutely positioned div */
               <button
                 disabled={loading}
                 className="group/btn relative w-full bg-red-600 hover:bg-red-500 text-white font-black py-4 rounded-2xl mt-4 overflow-hidden transition-all active:scale-[0.98] disabled:opacity-70 shadow-[0_10px_20px_rgba(220,38,38,0.2)]"
